@@ -43,7 +43,8 @@ fi
 
 cp lib/parse_file.hpp lib/sshash/include/builder/
 # Compilation
-cmake . && make -j
+#cmake . -DCMAKE_BUILD_TYPE=Debug  -DBMOPTFLAGS:STRING=BMAVX2OPT  -DCMAKE_CXX_FLAGS=-pg -DCMAKE_EXE_LINKER_FLAGS=-pg  -DCMAKE_SHARED_LINKER_FLAGS=-pg  && make -j
+cmake . -DCMAKE_BUILD_TYPE=Debug  && make -j
 
 #export PATH=$BASEDIR/lib/ESSCompress/bin:$BASEDIR/bin:$PATH
 
